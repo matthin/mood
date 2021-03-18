@@ -18,27 +18,29 @@ export default function MoodPage() {
   }, []);
 
   return (
-    <table class="mood table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Your Mood</th>
-          <th>Average Mood</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Energy</th>
-          <td>{userMood.energy}</td>
-          <td>{avgMood.energy}</td>
-        </tr>
-        <tr>
-          <th>Happiness</th>
-          <td>{userMood.happiness}</td>
-          <td>{avgMood.happiness}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="mood">
+      <table className="table">
+        <thead>
+          <tr>
+            <th/>
+            <th>Your Mood</th>
+            <th>Average Mood</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Energy</th>
+            <td>{userMood.energy}</td>
+            <td>{avgMood.energy}</td>
+          </tr>
+          <tr>
+            <th>Happiness</th>
+            <td>{userMood.happiness}</td>
+            <td>{avgMood.happiness}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 }
 
