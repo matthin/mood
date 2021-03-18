@@ -13,7 +13,7 @@ export default function IndexPage() {
 function connect() {
   const id = "fa510d9c8dca414aa4e7bfacf2af5247";
   const type = "token";
-  const redirect = "http://localhost:8000/callback";
+  const redirect = `${window.location.protocol}//${window.location.host}/callback`;
   const scope = "user-read-recently-played";
 
   window.location.href = `https://accounts.spotify.com/authorize?client_id=${id}&response_type=${type}&redirect_uri=${redirect}&scope=${scope}`;
