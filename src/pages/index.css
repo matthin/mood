@@ -1,0 +1,11 @@
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.index > * {
+    margin-bottom: 20px;
+}
