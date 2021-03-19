@@ -1,12 +1,17 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "./index.css";
 
 export default function IndexPage() {
   return (
-    <section className="index">
-      <p>Can your 20 most recently played Spotify songs determine your mood?</p>
-      <button className="button is-success is-rounded" onClick={connect}>Connect to Spotify</button>
-    </section>
+    <>
+      <Helmet title="Mood" />
+
+      <section className="index">
+        <p>Can your 20 most recently played Spotify songs determine your mood?</p>
+        <button className="button is-success is-rounded" onClick={connect}>Connect to Spotify</button>
+      </section>
+    </>
   )
 }
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import "./mood.css";
 
 const Mood = {
@@ -19,34 +20,38 @@ export default function MoodPage() {
   }, []);
 
   return (
-    <div className="mood">
-      <table className="table">
-        <thead>
-          <tr>
-            <th/>
-            <th>Your Mood</th>
-            <th>Average Mood</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Energy</th>
-            <td>{userMood.energy}</td>
-            <td>{avgMood.energy}</td>
-          </tr>
-          <tr>
-            <th>Happiness</th>
-            <td>{userMood.happiness}</td>
-            <td>{avgMood.happiness}</td>
-          </tr>
-          <tr>
-            <th>Danceability</th>
-            <td>{userMood.danceability}</td>
-            <td>{avgMood.danceability}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <>
+      <Helmet title="Mood" />
+
+      <div className="mood">
+        <table className="table">
+          <thead>
+            <tr>
+              <th/>
+              <th>Your Mood</th>
+              <th>Average Mood</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Energy</th>
+              <td>{userMood.energy}</td>
+              <td>{avgMood.energy}</td>
+            </tr>
+            <tr>
+              <th>Happiness</th>
+              <td>{userMood.happiness}</td>
+              <td>{avgMood.happiness}</td>
+            </tr>
+            <tr>
+              <th>Danceability</th>
+              <td>{userMood.danceability}</td>
+              <td>{avgMood.danceability}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
